@@ -3,6 +3,8 @@
 Used 
 [Google's BERT embeddings](https://github.com/google-research/bert). And [SentenceTransformers](https://github.com/UKPLab/sentence-transformers) in the interest of time.
 
+This python program uses BERT embeddings to indentify entity relationships between products and companies. It only shows matches where the score (based on cosine distance) is more than 0.6. As evidenced by the result, the more detailed the product and company name, the better the results.
+
 Below are the input and output for a sample test:
 
 '''
@@ -105,8 +107,6 @@ Below are the input and output for a sample test:
    ```
    python product_to_brand.py
    ```
-
-   This python program uses BERT embeddings to indentify entity relationships between products and companies. It only shows matches where the score (based on cosine distance) was >60%. As evidenced by the result, the more detailed the product and company name, the better the results.
   
 ## Author
 
