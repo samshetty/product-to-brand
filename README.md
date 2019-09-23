@@ -1,7 +1,7 @@
 # Indentify Entity relationships between products and companies
 
 Used 
-[Google's BERT embeddings](https://github.com/google-research/bert). And [SentenceTransformers](https://github.com/UKPLab/sentence-transformers) in the interest of time.
+[Google's BERT embeddings](https://github.com/google-research/bert). 
 
 This python program uses BERT embeddings to indentify entity relationships between products and companies. It only shows matches where the score (based on cosine distance) is more than 0.6. As evidenced by the result, the more detailed the product and company name, the better the results.
 
