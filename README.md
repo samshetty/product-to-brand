@@ -1,20 +1,22 @@
-# Matching Products to Brand
+# Indentify Entity relationships between products and companies
 
 Used 
 [Google's BERT embeddings](https://github.com/google-research/bert). And [SentenceTransformers](https://github.com/UKPLab/sentence-transformers) in the interest of time.
+
+Below are the input and output for a sample test:
 
 '''
    
       Input:
 
-      brands = ['apple inc.', 'microsoft Corporation', 'honda', 'samsung electronics', 'bloomberg llc', 
+      companies = ['apple inc.', 'microsoft Corporation', 'honda', 'samsung electronics', 'bloomberg llc', 
       'toyota', 'google', 'facebook', 'amazon']
 
-      products = \['ipad pro', 'iphone 10 plus','iphone', 'kindle e-reader', 'android', 'accord ex', 
+      products = ['ipad pro', 'iphone 10 plus','iphone', 'kindle e-reader', 'android', 'accord ex', 
       'windows os', 'windows', 'windows operating system', 'camry le', 'galaxy s9', 'galaxy s8', 
       'civic', 'chromecast','pixel phone', 'xbox one', 'fire tv']
 
-      Results: 
+      Output: 
       ======================
       Query: ipad pro
       Result:
@@ -104,7 +106,7 @@ Used
    python product_to_brand.py
    ```
 
-   This python program uses BERT embeddings to indentify entity relationships between products and companies. It only shows matches where the score (based on cosine distance) was >60%. As evdenced by the result, the more detailed the product and company name, the better the results.
+   This python program uses BERT embeddings to indentify entity relationships between products and companies. It only shows matches where the score (based on cosine distance) was >60%. As evidenced by the result, the more detailed the product and company name, the better the results.
   
 ## Author
 
