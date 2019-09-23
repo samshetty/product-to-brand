@@ -3,7 +3,8 @@ import scipy.spatial
 
 embedder = SentenceTransformer('bert-base-nli-mean-tokens')
 brand = ['apple inc.', 'microsoft Corporation', 'honda', 'samsung electronics',  
-          'bloomberg llc', 'toyota', 'google', 'facebook', 'amazon']
+          'bloomberg llc', 'toyota', 'google', 'facebook', 'amazon', 'Philips corporation',
+        'JP Morgan Chase', 'Goldman Sachs', 'Atari Inc']
 brand_embeddings = embedder.encode(brand)
 
 product = ['ipad pro', 'iphone 10 plus','iphone', 'kindle e-reader', 'android', 'accord ex', 'windows os', 'windows',
@@ -20,8 +21,8 @@ for product, product_embedding in zip(product, product_embeddings):
     results = sorted(results, key=lambda x: x[1])
     
     print("======================")
-    print("Query:", product)
-    print("Result:")
+    print("Product:", product)
+    print("Company:")
 
     for idx, distance in results[0:closest_n]:
         result = brand[idx].strip() + "(Score: %.4f)" % (1-distance) if 1-distance > 0.6 else 'Match not found.'
